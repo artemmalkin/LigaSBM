@@ -42,8 +42,8 @@ h3 {
 }
 
 h4 {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 h5 {
@@ -75,7 +75,6 @@ section {
 nav {
   /* Стили для навигации */
   display: flex;
-  
   width: 100%;
   justify-content:space-around;
   
@@ -89,13 +88,13 @@ nav div {
   /* Дополнительные стили для секций */
 }
 
-/* Пример стиля для кнопок */
 .btn {
-  background-color: #00adee;
+  border: 2px solid var(--color-secondary);
   color: white;
   padding: 10px 20px;
-  border: none;
   cursor: pointer;
+  width: fit-content;
+  padding: 15px 50px;
 }
 
 .main {
@@ -106,8 +105,8 @@ nav div {
   text-align: center;
 }
 
-.main .content {
-
+.main h4 {
+  margin: auto;
 }
 
 /* Стили для подвала */
