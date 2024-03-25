@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 68px;
   font-weight: 700;
 }
 
@@ -56,27 +56,26 @@ h6 {
   font-weight: bold;
 }
   
-header, footer, section {
+footer, section {
   width: 100vw;
-}
-
-header {
-  position: absolute;
-  margin-top: 50px;
 }
 
 section {
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.content {
+  width: 80%;
+  height: 100%;
+  margin: auto;
 }
 
 nav {
   /* Стили для навигации */
   display: flex;
-  width: 100%;
-  justify-content:space-around;
+  margin: 50px auto;
+  justify-content: space-between;
   
 }
 
@@ -99,14 +98,48 @@ nav div {
 
 .main {
   background-image: url('../img/section_1.png');
+  background-color: #D9D9D9;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .main h4 {
   margin: auto;
+}
+
+.about-us {
+  background-image: url('../img/section_2.png');
+  background-color: #000914;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.about-us .block, .about-us .block-pharagraph {
+  border: 6px solid var(--color-secondary);
+  text-align: center;
+  padding: 50px;
+
+}
+
+.about-us .block-pharagraph {
+  height: 100%;
+}
+
+.about-us .blocks {
+  display: flex;
+  justify-content: space-between;
+  height: 60%;
+}
+
+.our-products , .product-categories, .services, .contacts {
+  background-color: #09111B;
 }
 
 /* Стили для подвала */
