@@ -1,0 +1,122 @@
+/* Стили для общих элементов, layout и типографики */
+:root {
+  --color-primary: #FFFFFF; /* основной цвет */
+  --color-secondary: #06E4D7; /* вторичный цвет */
+  --color-accent: #28a745; /* акцентный цвет */
+  --color-text: #333; /* цвет текста */
+  --color-background: #f8f9fa; /* цвет фона */
+  --color-border: #dee2e6; /* цвет границ */
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:  "Tajawal", sans-serif;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: bold;
+}
+  
+header, footer, section {
+  width: 100vw;
+}
+
+header {
+  position: absolute;
+  margin-top: 50px;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  /* Стили для навигации */
+  display: flex;
+  
+  width: 100%;
+  justify-content:space-around;
+  
+}
+
+nav div {
+  margin-top: auto;
+}
+
+.main, .about-us, .our-products, .product-categories, .services, .our-clients, .reviews {
+  /* Дополнительные стили для секций */
+}
+
+/* Пример стиля для кнопок */
+.btn {
+  background-color: #00adee;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.main {
+  background-image: url('../img/section_1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+
+.main .content {
+
+}
+
+/* Стили для подвала */
+footer {
+
+}
+
+/* Медиа-запросы и адаптивные стили если необходимо */
+@media (max-width: 768px) {
+  /* Стили для мобильной версии */
+}
+  
