@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Серые блоки</title>
+<style>
+  .container {
+    display: flex;
+  }
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Отступ между блоками */
+  }
+  .block {
+    background-color: #c0c0c0; /* Серый цвет блока */
+    width: 100px; /* Ширина меньших блоков */
+    height: 100px; /* Высота меньших блоков */
+  }
+  .big-block {
+    background-color: #c0c0c0; /* Серый цвет большого блока */
+    width: 200px; /* Ширина большего блока */
+    height: 210px; /* Высота большего блока */
+    margin-left: 10px; /* Отступ слева для большого блока */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="left-column">
+    <div class="block"></div>
+    <div class="block"></div>
+  </div>
+  <div class="big-block"></div>
+</div>
+</body>
+</html>
