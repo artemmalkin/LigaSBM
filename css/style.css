@@ -47,13 +47,13 @@ h4 {
 }
 
 h5 {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 h6 {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 700;
 }
   
 footer, section {
@@ -83,7 +83,7 @@ nav div {
   margin-top: auto;
 }
 
-.main, .about-us, .our-products, .product-categories, .services, .our-clients, .reviews {
+.main, .about-us, .our-services, .product-categories, .services, .our-clients, .reviews {
   /* Дополнительные стили для секций */
 }
 
@@ -166,9 +166,54 @@ nav div {
   height: 60%;
 }
 
-.our-products , .product-categories, .services, .contacts {
+.our-services h3 {
+  text-align: center;
+}
+
+.our-services h3 span {
+  text-decoration: underline;
+  text-decoration-color: var(--color-secondary);
+  text-decoration-thickness:10px;
+  text-underline-offset: 20px;
+}
+
+.our-services , .product-categories, .services, .contacts {
   background-color: #09111B;
 }
+
+/* .carousel {
+  display: flex;
+}
+
+.carousel-block.selected {
+  width: 462px;
+  height: 421px;
+  background-image: url('../img/carousel/image3.png');
+}
+.carousel-block.selected .title {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.carousel-block.prev .title{
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.carousel-block.next .title {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.carousel-block.start .title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.carousel-block.end .title {
+  font-size: 18px;
+  font-weight: 800;
+} */
 
 /* Стили для подвала */
 footer {
