@@ -122,21 +122,42 @@ nav div {
 }
 
 .about-us .block, .about-us .block-pharagraph {
-  border: 6px solid var(--color-secondary);
+  /* border: 6px solid var(--color-secondary); */
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position: center center;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+#block_1 {
+  background-image: url('../img/border_1.png');
+}
+
+#block_2 {
+  background-image: url('../img/border_2.png');
+}
+
+#block_3 {
+  background-image: url('../img/border_3.png');
+}
+
+#block_3 div {
+  width: 70%;
+}
+
 .about-us .block {
-  width: 260px;
-  height: 160px;
+  width: 250px;
+  height: 500px;
 }
 
 .about-us .block-pharagraph {
-  height: 362px;
-  margin-left: 100px;
+  text-align: left;
+  width: 500px;
+  height: 421px;
+  margin-left: 30px;
 }
 
 .about-us .blocks {
