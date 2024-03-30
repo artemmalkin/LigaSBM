@@ -90,10 +90,9 @@ nav div {
 .btn {
   border: 2px solid var(--color-secondary);
   color: white;
-  padding: 10px 20px;
   cursor: pointer;
   width: fit-content;
-  padding: 15px 50px;
+  padding: .5em 2em;
 }
 
 .main {

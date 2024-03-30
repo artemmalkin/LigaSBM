@@ -8,22 +8,27 @@ class Carousel {
       {
         'id': '1',
         'src': '../img/carousel/image1.png',
+        'title': 'Газификация предприятий',
       },
       {
         'id': '2',
         'src': '../img/carousel/image2.png',
+        'title': 'Доставка пропан-бутана',
       },
       {
         'id': '3',
         'src': '../img/carousel/image3.png',
+        'title': 'Заправка и обмен',
       },
       {
         'id': '4',
         'src': '../img/carousel/image4.png',
+        'title': 'Покупка, продажа, ремонт и обслуживание',
       },
       {
         'id': '5',
         'src': '../img/carousel/image5.png',
+        'title': 'Газификация предприятий',
       }
     ];
     this.carouselInView = [1, 2, 3, 4, 5];
@@ -47,16 +52,29 @@ class Carousel {
 
     // Take dataset array and append items to container
     this.carouselData.forEach((item, index) => {
-      const carouselItem = item.src ? document.createElement('img') : document.createElement('div');
-
-      container.append(carouselItem);
+      const carouselItem = document.createElement('div');
+      const carouselItemInfo =  document.createElement('div');
+      
+      carouselItem.append(carouselItemInfo);
+      const carouselItemTitle =  document.createElement('div');
+      const carouselItemButton =  document.createElement('h6');
+      carouselItemInfo.append(carouselItemTitle, carouselItemButton);
+      
       
       // Add item attributes
       carouselItem.className = `carousel-item carousel-item-${index + 1}`;
-      carouselItem.src = item.src;
-      carouselItem.setAttribute('loading', 'lazy');
       // Used to keep track of carousel items, infinite items possible in carousel however min 5 items required
       carouselItem.setAttribute('data-index', `${index + 1}`);
+
+      carouselItemInfo.className = "carousel-info";
+      carouselItemTitle.className = "carousel-title";
+      carouselItemTitle.innerText = item.title;
+      carouselItemButton.className = "btn";
+      carouselItemButton.innerText = "Подробнее"
+
+      carouselItem.style.backgroundImage = `url('img/carousel/image${index + 1}.png')`
+      carouselItem.style.backgroundSize = 'cover';
+      container.append(carouselItem);
     });
 
     this.carouselOptions.forEach((option) => {
