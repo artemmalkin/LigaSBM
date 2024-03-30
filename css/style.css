@@ -191,11 +191,12 @@ nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
 }
 
-.product-categories .product .price {
+.product-categories .product .title {
+  margin: auto;
 }
 
 .our-services , .product-categories, .note, .contacts {
