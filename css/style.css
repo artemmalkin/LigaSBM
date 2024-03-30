@@ -175,44 +175,32 @@ nav div {
   text-decoration-thickness:10px;
   text-underline-offset: 20px;
 }
+.product-categories .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.product-categories .product {
+  border: var(--color-secondary) solid 5px;
+  border-radius: 20px;
+  width: 300px;
+  height: 180px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-.our-services , .product-categories, .services, .contacts {
+}
+
+.product-categories .product .price {
+}
+
+.our-services , .product-categories, .note, .contacts {
   background-color: #09111B;
 }
-
-/* .carousel {
-  display: flex;
-}
-
-.carousel-block.selected {
-  width: 462px;
-  height: 421px;
-  background-image: url('../img/carousel/image3.png');
-}
-.carousel-block.selected .title {
-  font-size: 32px;
-  font-weight: 800;
-}
-
-.carousel-block.prev .title{
-  font-size: 21px;
-  font-weight: 800;
-}
-
-.carousel-block.next .title {
-  font-size: 21px;
-  font-weight: 800;
-}
-
-.carousel-block.start .title {
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.carousel-block.end .title {
-  font-size: 18px;
-  font-weight: 800;
-} */
 
 /* Стили для подвала */
 footer {
