@@ -12,6 +12,37 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
     <script defer src="js/carousel.js"></script>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=46a7e9d4-5e12-46de-abec-02a3379b01ca&lang=ru_RU"></script>
+    <script>
+        initMap();
+
+        async function initMap() {
+            // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+            await ymaps3.ready;
+
+            const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+            // Иницилиазируем карту
+            const map = new YMap(
+                // Передаём ссылку на HTMLElement контейнера
+                document.getElementById('map'),
+
+                // Передаём параметры инициализации карты
+                {
+                    location: {
+                        // Координаты центра карты
+                        center: [37.588144, 55.733842],
+
+                        // Уровень масштабирования
+                        zoom: 10
+                    }
+                }
+            );
+            
+            // Добавляем слой для отображения схематической карты
+            map.addChild(new YMapDefaultSchemeLayer());
+        }
+    </script>
 </head>
 
 <body>
@@ -238,7 +269,7 @@
                 </div>
                 <div class="product">
                     <div class="title">
-                        Продажа баллоны стальные, б/у, 40 л 
+                        Продажа баллоны стальные, б/у, 40 л
                     </div>
                     <div class="price">
                         Цена договорная
@@ -272,10 +303,35 @@
 
     <section class="contacts">
         <!-- Контакты -->
+        <div class="content">
+            <h3>КОНТАКТЫ</h3>
+            <div id="map" style="width: 100%; height: 80%"></div>
+            <div class="info">
+                <div class="info-item">
+                    <img src="img/geo.svg" alt="" srcset="">
+                    <div class="title">г. Самара, Бакинская 8</div>
+                </div>
+                <div class="info-item">
+                    <img src="img/phone.svg" alt="" srcset="">
+                    <div class="title">8 (962) 607 31 37</div>
+                </div>
+                <div class="info-item">
+                    <img src="img/mail.svg" alt="" srcset="">
+                    <div class="title">arsenal-samara@list.ru</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
         <!-- Подвал сайта с контактной информацией и прочим -->
+        <div class="content">
+                <div>Главная</div>
+                <div>О нас</div>
+                <div>Услуги</div>
+                <div>Продукция</div>
+                <div>Контакты</div>
+        </div>
     </footer>
 </body>
 

@@ -233,19 +233,46 @@ nav div {
 }
 
 .note .block {
-  width: 400px;
+  width: calc(100%/2 + 20px);
   height: 300px;
   font-size: 20px;
   font-weight: 700;
   text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 40px;
   background-repeat:no-repeat;
   background-size:contain;
   background-position: center center;
+}
+
+.contacts {
+  height: auto;
+  padding-bottom: 100px;
+}
+
+.contacts .content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contacts .info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacts .info .info-item {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.contacts .title {
+  margin-left: 10px;
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .our-services , .product-categories, .note, .contacts {
@@ -254,8 +281,23 @@ nav div {
 
 /* Стили для подвала */
 footer {
-
+  background-color: var(--color-secondary);
+  color:black;
+  height: 10vh;
+  font-size: 20px;
+  font-weight: 500;
 }
+
+footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer .content div {
+  cursor: pointer;
+}
+
 
 /* Медиа-запросы и адаптивные стили если необходимо */
 @media (max-width: 768px) {
