@@ -143,6 +143,14 @@ nav div {
   background-image: url('../img/border_3.png');
 }
 
+#block_4 {
+  background-image: url('../img/border_4.png');
+}
+
+#block_5 {
+  background-image: url('../img/border_5.png');
+}
+
 #block_3 div {
   width: 70%;
 }
@@ -175,6 +183,10 @@ nav div {
   text-decoration-thickness:10px;
   text-underline-offset: 20px;
 }
+
+.product-categories {
+  height: auto;
+}
 .product-categories .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -197,6 +209,43 @@ nav div {
 
 .product-categories .product .title {
   margin: auto;
+}
+
+.note {
+  padding-top: 100px;
+}
+
+.note .content {
+  display: flex;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: auto;
+}
+
+.note .title {
+  color: var(--color-secondary);
+  margin: auto 0;
+}
+
+.note .text {
+  margin: auto 0;
+}
+
+.note .block {
+  width: 400px;
+  height: 300px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position: center center;
 }
 
 .our-services , .product-categories, .note, .contacts {
