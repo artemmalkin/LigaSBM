@@ -258,6 +258,7 @@ nav div {
 }
 
 .contacts .info {
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -303,4 +304,3 @@ footer .content div {
 @media (max-width: 768px) {
   /* Стили для мобильной версии */
 }
-  
