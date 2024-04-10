@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <section class="main">
+    <section id="main" class="main">
         <!-- Главная -->
         <div class="content">
             <nav>
@@ -33,7 +33,7 @@
 
     </section>
 
-    <section class="about-us">
+    <section id="about-us" class="about-us">
         <!-- Информация о компании -->
         <div class="content">
             <h2>О НАС</h2>
@@ -57,7 +57,7 @@
 
     </section>
 
-    <section class="our-services">
+    <section id="our-services" class="our-services">
         <!-- Блок наших услуг -->
         <div class="content">
             <h3>НАШИ УС<span>ЛУГИ</span></h3>
@@ -65,7 +65,7 @@
         </div>
     </section>
 
-    <section class="product-categories">
+    <section id="product-categories" class="product-categories">
         <!-- Категории продуктов -->
         <div class="content">
             <h3>ГАЗООБРАЗНАЯ ПРОДУКЦИЯ В БАЛЛОНАХ</h3>
@@ -270,7 +270,7 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section id="contacts" class="contacts">
         <!-- Контакты -->
         <div class="content">
             <h3>КОНТАКТЫ</h3>
@@ -278,30 +278,46 @@
             <div class="info">
                 <div class="info-item">
                     <img src="img/geo.svg" alt="" srcset="">
-                    <div class="title">г. Самара, Бакинская 8</div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=г. Самара, Бакинская 8" class="title" target="_blank">г. Самара, Бакинская 8</a>
                 </div>
                 <div class="info-item">
                     <img src="img/phone.svg" alt="" srcset="">
-                    <div class="title">8 (962) 607 31 37</div>
+                    <a href="tel:+79626073137" class="title">8 (962) 607 31 37</a>
                 </div>
                 <div class="info-item">
                     <img src="img/mail.svg" alt="" srcset="">
-                    <div class="title">arsenal-samara@list.ru</div>
+                    <a href="mailto:arsenal-samara@list.ru" class="title">arsenal-samara@list.ru</a>
                 </div>
+                
             </div>
         </div>
     </section>
 
     <footer>
-        <!-- Подвал сайта с контактной информацией и прочим -->
         <div class="content">
-            <div>Главная</div>
-            <div>О нас</div>
-            <div>Услуги</div>
-            <div>Продукция</div>
-            <div>Контакты</div>
+            <a href="#main">Главная</a>
+            <a href="#about-us">О нас</a>
+            <a href="#our-services">Услуги</a>
+            <a href="#product-categories">Продукция</a>
+            <a href="#contacts">Контакты</a>
         </div>
     </footer>
+    <script>
+        document.querySelectorAll('footer a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                const href = this.getAttribute('href');
+                const offsetTop = document.querySelector(href).offsetTop;
+    
+                window.scroll({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
 </body>
 
 </html>

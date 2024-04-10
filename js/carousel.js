@@ -24,14 +24,9 @@ class Carousel {
         'id': '4',
         'src': '../img/carousel/image4.png',
         'title': 'Покупка, продажа, ремонт и обслуживание',
-      },
-      {
-        'id': '5',
-        'src': '../img/carousel/image5.png',
-        'title': 'Газификация предприятий',
       }
     ];
-    this.carouselInView = [1, 2, 3, 4, 5];
+    this.carouselInView = [1, 2, 3, 4];
     this.carouselContainer;
     this.carouselPlayState;
   }
