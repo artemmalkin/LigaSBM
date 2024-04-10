@@ -303,6 +303,26 @@ footer .content {
 
 
 /* Медиа-запросы и адаптивные стили если необходимо */
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   /* Стили для мобильной версии */
+  .content {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
+
+  .product-categories .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки одинаковой ширины */
+    gap: 20px; /* Расстояние между колонками и строками */
+    justify-content: center; /* Выравнивание сетки по горизонтали */
+    width: fit-content; /* Ширина контейнера по ширине содержимого */
+    margin: 0 auto; /* Выравнивание контейнера по центру страницы */
+  }
+
+  .product-categories .product {
+    width: calc(100vw / 3);
+  }
+
 }
