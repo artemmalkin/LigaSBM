@@ -308,7 +308,7 @@ footer .content {
   .content {
     width: 100%;
   }
-  h3 {
+  h3, h2 {
     text-align: center;
   }
 
@@ -325,4 +325,14 @@ footer .content {
     width: calc(100vw / 3);
   }
 
+  .our-services, .about-us {
+    height: auto;
+  }
+
+  .contacts .info {
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+  }
 }
