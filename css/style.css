@@ -374,4 +374,17 @@ footer .content {
     margin: 0 auto;
     gap: 30px;
   }
+
+  .note .content {
+    display: block;
+
+    justify-content: center;
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 20px;
+    margin: auto;
+  }
+
+  .note .block {
+    margin: 0 auto;
+  }
 }
