@@ -305,11 +305,50 @@ footer .content {
 /* Медиа-запросы и адаптивные стили если необходимо */
 @media (max-width: 1280px) {
   /* Стили для мобильной версии */
+
   .content {
     width: 100%;
   }
   h3, h2 {
     text-align: center;
+  }
+
+  .main {
+    height: auto;
+    padding-bottom: 5em;
+  }
+
+  .main nav {
+    width: 90%;
+  }
+
+  .about-us {
+    padding-bottom:  5em;
+  }
+
+  .about-us .block {
+    width: 70%;
+  }
+
+  .about-us .block-pharagraph {
+    width: 100%;
+    height: auto;
+    padding: 10em 0;
+  }
+
+  #block_3 div {
+    width: 50%;
+  }
+
+  .about-us .blocks {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+  }
+
+  .about-us .blocks div {
+    margin: 0 auto;
   }
 
   .product-categories .products {
