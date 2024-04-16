@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
     <script defer src="js/carousel.js"></script>
+
+    <head>
+        <script src="https://api-maps.yandex.ru/v3/?apikey=46a7e9d4-5e12-46de-abec-02a3379b01ca&lang=ru_RU"></script>
+    </head>
 </head>
 
 <body>
@@ -21,7 +25,7 @@
             <nav>
                 <!-- Меню навигации и лого -->
                 <img src="img/logo_white.png" alt="Логотип" width="139" height="37">
-                <div>8 (927) 751 42 83</div>
+                <div><a href="tel:+79626073137">8 (927) 751 42 83</a></div>
                 <div>ЛЮБАЯ ФОРМА ОПЛАТЫ</div>
                 <div>РАБОТАЕМ КРУГЛОСУТОЧНО</div>
             </nav>
@@ -274,11 +278,55 @@
         <!-- Контакты -->
         <div class="content">
             <h3>КОНТАКТЫ</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.56208937851!2d50.06788107625828!3d53.1180547917809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4168a6e344838bf9%3A0x55b2dc527e0211a8!2z0YPQuy4g0JHQsNC60LjQvdGB0LrQsNGPLCA4LCDQodCw0LzQsNGA0LAsINCh0LDQvNCw0YDRgdC60LDRjyDQvtCx0LsuLCA0NDMwMDQ!5e0!3m2!1sru!2sru!4v1712576187894!5m2!1sru!2sru" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="map" style="width: 100%; height: 500px"></div>
+            <script>
+                initMap();
+
+                async function initMap() {
+                    // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+                    await ymaps3.ready;
+
+                    const { YMap, YMapDefaultSchemeLayer, YMapFeatureDataSource, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
+
+                    // Иницилиазируем карту
+                    const map = new YMap(
+                        // Передаём ссылку на HTMLElement контейнера
+                        document.getElementById('map'),
+
+                        // Передаём параметры инициализации карты
+                        {
+                            location: {
+                                // Координаты центра карты
+                                center: [50.069633, 53.117741],
+
+                                // Уровень масштабирования
+                                zoom: 20
+                            }
+                        }
+                    );
+
+                    // Добавляем слой для отображения схематической карты
+                    map.addChild(new YMapDefaultSchemeLayer());
+
+                    map.addChild(new YMapDefaultFeaturesLayer());
+
+                    const { YMapDefaultMarker } = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
+
+                    map.addChild(
+                        new YMapDefaultMarker({
+                            coordinates: [50.069633, 53.117741],
+                            title: 'Ул. Бакинская, 8',
+                            subtitle: 'Офис Лига СБМ',
+                            color: '#06E4D7'
+                        })
+                    );
+                }
+            </script>
             <div class="info">
                 <div class="info-item">
                     <img src="img/geo.svg" alt="" srcset="">
-                    <a href="https://www.google.com/maps/search/?api=1&query=г. Самара, Бакинская 8" class="title" target="_blank">г. Самара, Бакинская 8</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=г. Самара, Бакинская 8" class="title"
+                        target="_blank">г. Самара, Бакинская 8</a>
                 </div>
                 <div class="info-item">
                     <img src="img/phone.svg" alt="" srcset="">
@@ -288,7 +336,7 @@
                     <img src="img/mail.svg" alt="" srcset="">
                     <a href="mailto:arsenal-samara@list.ru" class="title">arsenal-samara@list.ru</a>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -306,10 +354,10 @@
         document.querySelectorAll('footer a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-    
+
                 const href = this.getAttribute('href');
                 const offsetTop = document.querySelector(href).offsetTop;
-    
+
                 window.scroll({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -317,7 +365,7 @@
             });
         });
     </script>
-    
+
 </body>
 
 </html>
