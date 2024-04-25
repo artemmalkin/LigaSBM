@@ -151,31 +151,29 @@ nav div {
 #block_3 {
   width: auto;
   height: auto;
-  font-size: 40px;
+  font-size: xx-large;
   font-weight: 400;
-  padding: 0 1em;
+  padding: 1em;
   text-align: left;
 }
 
 #block_4 {
-  background-image: url('../img/border_4.png');
+
 }
 
 #block_5 {
-  background-image: url('../img/border_5.png');
+
 }
 
 
-.about-us .block {
-
+.block {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.about-us .block {
+.block {
   width: 250px;
   left: 10%;
   transform: translateY(0%);
@@ -183,23 +181,23 @@ nav div {
   border-top: none;
 }
 
-.about-us .block::before, .about-us .block::after {
+.block::before, .block::after {
   content: '';
   position: absolute;
   top: 0;
   height: 6px;
   background: var(--color-secondary);
 }
-.about-us .block::before {
+.block::before {
   left: 0;
   width: 10%;
 }
-.about-us .block::after {
+.block::after {
   right: 0;
   width: 70%;
 }
 
-.about-us span {
+.block span {
   width: 20%;
   position: absolute;
   top: 0;
@@ -274,16 +272,25 @@ nav div {
   margin: auto;
 }
 
+.note .block {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 2em;
+}
 .note .title {
   color: var(--color-secondary);
-  margin: auto 0;
+  text-align: left;
+  margin-right: auto;
+  margin-bottom: 1em;
+
 }
 
 .note .text {
-  margin: auto 0;
+
 }
 
-.note .block {
+/* .note .block {
   width: calc(100%/2 + 20px);
   height: 300px;
   font-size: 20px;
@@ -296,7 +303,7 @@ nav div {
   background-repeat:no-repeat;
   background-size:contain;
   background-position: center center;
-}
+} */
 
 .contacts {
   height: auto;
@@ -375,21 +382,18 @@ footer .content {
     /* width: 70%; */
   }
 
-  .about-us .block-pharagraph {
-    width: 50%;
-  }
-
+/* 
   #block_3 div {
     width: 50%;
-  }
+  } */
 
   .about-us .blocks {
 
   }
 
-  .about-us .blocks div {
+  /* .about-us .blocks div {
     margin: 0 auto;
-  }
+  } */
 
   .product-categories .products {
     display: grid;
@@ -415,13 +419,13 @@ footer .content {
     gap: 5em;
   }
 
-  .note .content {
+  /* .note .content {
     display: block;
     justify-content: center;
     margin: auto;
-  }
+  } */
 
-  .note .block {
+  /* .note .block {
     margin: 0 auto;
-  }
+  } */
 }
