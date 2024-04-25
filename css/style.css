@@ -125,8 +125,7 @@ nav div {
   font-weight: 400;
 }
 
-.about-us .block, .about-us .block-pharagraph {
-  /* border: 6px solid var(--color-secondary); */
+/* .about-us .block, .about-us .block-pharagraph {
   background-repeat:no-repeat;
   background-size:contain;
   background-position: center center;
@@ -142,10 +141,20 @@ nav div {
 
 #block_2 {
   background-image: url('../img/border_2.png');
+} */
+
+#block_1, #block_2 {
+  width: 250px;
+  height: 150px;
 }
 
 #block_3 {
-  background-image: url('../img/border_3.png');
+  width: auto;
+  height: auto;
+  font-size: 40px;
+  font-weight: 400;
+  padding: 0 1em;
+  text-align: left;
 }
 
 #block_4 {
@@ -156,23 +165,59 @@ nav div {
   background-image: url('../img/border_5.png');
 }
 
-#block_3 div {
-  width: 70%;
+
+.about-us .block {
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .about-us .block {
   width: 250px;
-  height: 500px;
+  left: 10%;
+  transform: translateY(0%);
+  border: 6px solid var(--color-secondary);
+  border-top: none;
 }
 
-.about-us .block-pharagraph {
-  text-align: left;
-  width: 500px;
-  height: 421px;
-  margin-left: 3em;
+.about-us .block::before, .about-us .block::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 6px;
+  background: var(--color-secondary);
+}
+.about-us .block::before {
+  left: 0;
+  width: 10%;
+}
+.about-us .block::after {
+  right: 0;
+  width: 70%;
+}
+
+.about-us span {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateY(-50%);
+  color: var(--color-secondary);
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+
+#block_3 span {
+  font-size: 40px;
+  font-weight: 500;
 }
 
 .about-us .blocks {
+  gap: 5em;
   display: flex;
   justify-content: space-between;
   height: 60%;
@@ -327,7 +372,7 @@ footer .content {
   }
 
   .about-us .block {
-    width: 70%;
+    /* width: 70%; */
   }
 
   .about-us .block-pharagraph {
@@ -339,10 +384,7 @@ footer .content {
   }
 
   .about-us .blocks {
-    display: block;
-    margin: 0 auto;
-    width: auto;
-    height: auto;
+
   }
 
   .about-us .blocks div {
