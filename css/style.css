@@ -190,11 +190,11 @@ nav div {
 }
 .block::before {
   left: 0;
-  width: 10%;
+  width: 5%;
 }
 .block::after {
   right: 0;
-  width: 70%;
+  width: 65%;
 }
 
 .block span {
@@ -378,14 +378,35 @@ footer .content {
     padding-bottom: 5em;
   }
 
-  .about-us .block {
-    /* width: 70%; */
+  .about-us .content {
+    width: 90%;
   }
 
-/* 
-  #block_3 div {
+  .block span {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translateY(-50%);
+    color: var(--color-secondary);
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .block::before {
+    left: 0;
+    width: 10%;
+  }
+  .block::after {
+    right: 0;
     width: 50%;
-  } */
+  }
+
+  #block_3 span {
+    font-size: larger;
+    font-weight: 400;
+  }
 
   .about-us .blocks {
 
